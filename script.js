@@ -9,6 +9,7 @@ let instockCount = 0;
 
 let form = document.querySelector("form");
 
+let newTitleMobile = document.querySelector(".new-button-mobile");
 let newTitleButton = document.querySelector(".new-title");
 let cancelButton = document.getElementById("cancel");
 
@@ -30,7 +31,9 @@ form.addEventListener("submit", event => {
     form.style.display = "none";
 })
 
-
+newTitleMobile.addEventListener("click", () => {
+    form.style.display = "block";
+});
 
 newTitleButton.addEventListener("click", () => {
     form.style.display = "grid";
@@ -129,12 +132,13 @@ function addBook(artwork, title, author, price, stock) {
         editButton.style.cursor = "pointer";
         deleteButton.style.cursor = "pointer";
     });
-    newBook.addEventListener("pointerleave", () => {
-        editButton.style.color = "rgba(0, 0, 0, 0)";
-        deleteButton.style.color = "rgba(0, 0, 0, 0)";
-        editButton.style.cursor = "";
-        deleteButton.style.cursor = "";
-    });
+    if (window.innerWidth > 573)
+        newBook.addEventListener("pointerleave", () => {
+            editButton.style.color = "rgba(0, 0, 0, 0)";
+            deleteButton.style.color = "rgba(0, 0, 0, 0)";
+            editButton.style.cursor = "";
+            deleteButton.style.cursor = "";
+        });
 
     let stockElem = document.createElement("div");
     stockElem.className = "book-stock";

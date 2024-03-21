@@ -259,6 +259,9 @@ form{
     }
 
 }
+.new-button-mobile{
+    display: none;
+}
 @media (max-width: 1259px){
     .author-column{
         display: none;
@@ -293,5 +296,85 @@ form{
     }
     hr{
         width: 104px;
+    }
+}
+@media (max-width: 573px){
+    .left-pane{
+        display: none;
+    }
+    .total-books{
+        display: inline-block;
+    }
+    .new-button-mobile{
+        display: inline-block;
+        font-size: 46px;
+        padding-left: 10px;
+        color: rgb(250, 35, 59);
+        cursor: pointer;
+    }
+    #price{
+        display: block;
+    }
+    .form-container{
+        height: 100vh;
+        border-radius: 0;
+    }
+    .form-buttons{
+        margin: 100px auto 0;
+        padding: 0;
+        width: fit-content;
+
+        #cancel{
+            margin-right: 100px;
+            background-color: rgba(60, 60, 67, 0.05);
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.1)
+            }
+        }
+    }
+    input{
+        text-align: center;
+    }
+    #cover-art-file{
+        position: relative;
+        left: 50%;
+        top: 5%;
+    }
+    .or{
+        position: relative;
+            left: 5%;
+            top: 5%;
+        }
+    #price{
+        width: 30%;
+    }
+    #title,
+    #author,
+    #price,
+    #cover-art,
+    #stock{
+        margin-top: 50px;
+    }
+    #stock{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .book-author{
+        display: block;
+    }
+    .author-column{
+        display: block;
+    }
+    .book-option{
+        width: 0; 
+    }
+    .book-stock i{
+        font-size: 34px;
+        position: relative;
+        left: -50%;
+    }
+    .book-option .book-delete{
+        margin-top: 30px;
     }
 }
