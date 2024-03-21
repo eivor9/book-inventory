@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    color:rgba(0, 0, 0, 0.85);
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+body{
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    height: 100vh;
+}
+.left-pane {
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: rgba(60, 60, 67, 0.03);
+
+    ::selection{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+}
+.title{
+    padding: 30px 17px;
+    font-size: 30px;
+}
+.title-2{
+    text-align: center;
+}
+.title-3{
+    text-align: right;
+}
+hr{
+    position: relative;
+    left: 30px;
+    width: 200px;
+    background-color:rgba(0, 0, 0, 0.85);
+}
+.new-title{
+    position: sticky;
+    top:440px;
+    margin: auto;
+    margin-top: 200px;
+    font-size: 24px;
+    text-align: center;
+    width: fit-content;
+    padding: 0 50px 10px;
+    border-radius: 30px;
+    &:hover{
+        background-color: rgba(60, 60, 67, 0.1);
+        cursor: pointer;
+    }
+}
+.new-title span{
+    font-size: 40px;
+    font-weight: 100;
+    position: relative;
+    top: 1px;
+    color: rgb(250, 35, 59);
+}
+.right-pane{
+    padding: 40px;
+    overflow-y: scroll;
+
+}
+main{
+    display: block;
+    margin: auto;
+    width:100%;
+}
+.summary{
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    height: 270px;
+    column-gap: 40px;
+    ::selection{
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+.logo{
+    box-sizing: border-box;
+    background-color: rgb(67, 67, 234);
+    height: 270px;
+    width: 270px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px 0px;
+}
+.svg-logo{
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+.inventory-count{
+    margin: auto 0;
+}
+.total-books{
+    font-size: 36px;
+    font-weight: 600;
+}
+.instock-titles{
+    color: rgb(250, 35, 59);
+    font-size: 26px;
+}
+.outofstock-titles{
+    font-size: 18px;
+}
+.header-row{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 3fr 2fr 2fr 1fr;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    column-gap: 10px;
+    ::selection{
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+div[class*="column"]{
+    color: rgba(0, 0, 0, 0.5);
+}
+.title-column, 
+.author-column{
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+.stock-column{
+    text-align: center;
+}
+.book-item{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 3fr 2fr 2fr 1fr;
+    column-gap: 10px;
+    height: 100px;
+}
+.cover-art{
+    max-width: 100%;
+    max-height: 100px;
+    margin: auto;
+}
+.book-title{
+    max-width: 400px;
+    max-height: 100%;
+    margin: auto 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.book-author{
+    max-width: 400px;
+    max-height: 100%;
+    margin: auto 0;
+}
+.book-price{
+    margin: auto 0;
+}
+.book-option{
+    margin: auto 0;
+    letter-spacing: 50px;
+    font-size: 24px;
+}
+.book-stock{
+    margin: auto 0;
+    text-align: center;
+    font-size: 40px;
+}
+.fa-circle-check{
+    color: rgb(250, 35, 59);
+}
+form{
+    position: absolute;
+    height:max-content;
+    width: 100vw;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.form-container{
+    margin: auto;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    padding: 20px;
+    width:600px;
+}
+.form-header{
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+#title,
+#author,
+#price,
+#stock{
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+}
+#title, #author, #price, #cover-art{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.85);
+    outline: none;
+    &:focus{
+        border-bottom: 2px solid rgb(250, 35, 59);
+    }
+}
+#title, #author{
+    display: block;
+    width: 95%;
+}
+#price{
+    width: 40%;
+}
+#cover-art{
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 30%;
+}
+#cover-art-file{
+    font-size: 18px;
+}
+.form-buttons{
+    padding-left: 360px;
+}
+#cancel, #add{
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+#cancel{
+    background-color: transparent;
+    border: none;
+    &:hover{
+        background-color: rgba(60, 60, 67, 0.1);
+    }
+}
+#add{
+    background-color: rgba(60, 60, 67, 0.1);
+    border: none;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+}
+.no-books{
+    background-color: rgba(0,0,0,0);
+}
