@@ -93,6 +93,9 @@ main{
 .inventory-count{
     margin: auto 0;
 }
+.container{
+    min-width: 300px;
+}
 .total-books{
     font-size: 36px;
     font-weight: 600;
@@ -140,6 +143,7 @@ div[class*="column"]{
     margin: auto;
 }
 .book-title{
+    min-width: 50px;
     max-width: 400px;
     max-height: 100%;
     margin: auto 0;
@@ -158,6 +162,12 @@ div[class*="column"]{
     margin: auto 0;
     letter-spacing: 50px;
     font-size: 24px;
+}
+i {
+    width: 24px;
+}
+.book-edit{
+    margin-right: 40px;
 }
 .book-stock{
     margin: auto 0;
@@ -247,6 +257,30 @@ form{
     }
 
 }
-.no-books{
-    background-color: rgba(0,0,0,0);
+@media (max-width: 1259px){
+    .author-column{
+        display: none;
+    }
+    .book-author {
+        display: none;
+    }
+}
+@media (max-width: 999px){
+    .summary{
+        display: block;
+        height: fit-content;
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+    }
+    .logo {
+        margin-bottom: 20px;
+    }
+    .container{
+        position: relative;
+        top: -15px;
+    }
+    .book-edit{
+        margin-right: 0;
+    }
 }
