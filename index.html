@@ -52,7 +52,7 @@
             <input id="cover-art" type="url" placeholder="Cover Art URL">
             <div class="or" style="display: inline-block">or</div>
             <input type="file" accept="image/*" name="artwork" id="cover-art-file">
-            <label for="price"><input required id="price" type="text" placeholder="Price"></label>
+            <label for="price"><input required id="price" type="number" step="0.01" min="0.01" placeholder="Price"></label>
             <select name="stock" id="stock">
                 <option value="instock">in stock</option>
                 <option value="outofstock">out of stock</option>

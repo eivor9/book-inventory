@@ -164,6 +164,8 @@ function resetForm(){
     URL.value = "";
     let fileInput = document.getElementById("cover-art-file");
     fileInput.value = "";
+    let currentPrice = document.getElementById("price");
+    currentPrice.value = "";
 }
 
 function editBookItem(){
