@@ -189,3 +189,22 @@ function editBookItem(){
     this.parentElement.parentElement.remove();
 
 }
+
+let sampleBook1 = [
+    "images/easter.png",
+    "It's Not Easy Being a Bunny",
+    "Marilyn Sadler",
+    "5.98",
+    true
+]
+
+let sampleBook2 = [
+    "images/atomic.png",
+    "Atomic Habits",
+    "James Clear",
+    "13.79",
+    false
+]
+
+addBook(...sampleBook1);
+addBook(...sampleBook2);
