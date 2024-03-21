@@ -191,7 +191,7 @@ form{
     background-color: rgb(250, 250, 250);
     border-radius: 10px;
     padding: 20px;
-    width:600px;
+    max-width:600px;
 }
 .form-header{
     margin-bottom: 40px;
@@ -234,7 +234,7 @@ form{
     font-size: 18px;
 }
 .form-buttons{
-    padding-left: 360px;
+    padding-left: 58%;
 }
 #cancel, #add{
     font-size: 20px;
