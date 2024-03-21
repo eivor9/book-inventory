@@ -380,7 +380,6 @@ form{
     }
     body{ 
         overflow-x: hidden;
-        overflow-y: hidden;
     }
 }
 
@@ -405,6 +404,7 @@ form{
         height: 100vh;
         border-radius: 0;
         background-color: white;
+        overflow-y: scroll;
     }
     .form-buttons{
         margin: 100px auto 0;
