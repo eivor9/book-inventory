@@ -32,7 +32,7 @@ body{
 hr{
     position: relative;
     left: 30px;
-    width: 200px;
+    width: 75%;
     background-color:rgba(0, 0, 0, 0.85);
 }
 .new-title{
@@ -43,7 +43,9 @@ hr{
     font-size: 24px;
     text-align: center;
     width: fit-content;
-    padding: 0 50px 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 30px;
     &:hover{
         background-color: rgba(60, 60, 67, 0.1);
@@ -282,5 +284,14 @@ form{
     }
     .book-edit{
         margin-right: 0;
+    }
+    body{
+        grid-template-columns: 1fr auto;
+    }
+    .new-title{
+        font-size: 20px;
+    }
+    hr{
+        width: 104px;
     }
 }
